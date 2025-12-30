@@ -1,0 +1,260 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fundo: #ffffff;
+  --cor1: #363636;
+  --cor2: #6e1c1c;
+  --cor3: #9d3b3b;
+  font-size: 10px;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "sidebar footer footer";
+  font-family: Roboto, sans-serif;
+  overflow: hidden;
+  color: var(--cor1);
+}
+
+#logo-div {
+  min-width: 7rem;
+  background-color: var(--fundo);
+  overflow: hidden;
+}
+
+#logo-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 1rem;
+  max-width: 6rem;
+  max-height: 100%;
+  border-radius: 0.2rem;
+}
+
+#header {
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  width: 100vw;
+  max-height: 10vh;
+  min-height: 7rem;
+  background-color: var(--fundo);
+  overflow: hidden;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100vw - 7rem);
+  overflow: hidden;
+}
+
+#navbar ul {
+  display: flex;
+  list-style-type: none;
+  font-size: 2rem;
+  font-weight: bold;
+  gap: 2rem;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: var(--cor1);
+}
+
+.navbar-link:hover {
+  border-bottom: 0.4rem solid var(--cor1);
+  padding-bottom: 0.4rem;
+  border-radius: 0.2rem;
+}
+
+#sidebar {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 7rem;
+  height: 90vh;
+  overflow: hidden;
+  background-color: var(--fundo);
+}
+
+#sidebar-div {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.6rem;
+}
+
+#sidebar ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  list-style-type: none;
+  margin-bottom: 2rem;
+}
+
+.social-ico {
+  opacity: 30%;
+  width: 4.2rem;
+  height: 4.2rem;
+}
+
+.social-ico:hover {
+  opacity: 70%;
+}
+
+#linkedin {
+  border-radius: 0.2rem;
+}
+
+#main {
+  grid-area: main;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: calc(100vw - 7rem);
+  min-height: 60vh;
+  background-color: var(--fundo);
+}
+
+#section-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  height: 30rem;
+  width: 50rem;
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+
+h1:hover {
+  color: var(--cor2);
+}
+
+h2 {
+  font-size: 2.6em;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+#btn-cta {
+  background-color: var(--cor1);
+  color: var(--fundo);
+  padding: 1rem 2rem;
+  border-radius: 0.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+}
+
+#btn-cta:hover {
+  background-color: var(--cor2);
+  cursor: pointer;
+  border: none;
+}
+
+#btn-cta:active {
+  background-color: var(--cor3);
+  border: none;
+  cursor: pointer;
+}
+
+#section-right {
+  display: flex;
+  justify-content: center;
+  height: 30rem;
+  width: 50rem;
+  margin-right: 2rem;
+}
+
+#foto {
+  box-shadow: 1rem 1rem 0 var(--cor1);
+  border-radius: 0.2rem;
+}
+
+#foto:hover {
+  transform: scale(1.02);
+  transition: 1s ease-in-out;
+  transition-delay: 0.2s;
+}
+
+/* verificar ocultação do footer ao redimensionar */
+
+#footer {
+  grid-area: footer;
+  display: flex;
+  position: sticky;
+  background-color: var(--fundo);
+  justify-content: flex-start;
+  align-content: center;
+  overflow: hidden;
+  max-height: 10vh;
+  min-height: 7rem;
+}
+
+#footer-division {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  margin-left: 2rem;
+}
+
+#mail,
+#phone,
+#location {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+#mail-link,
+#mail-link:visited,
+#tel-link,
+#tel-link:visited,
+#location-link,
+#location-link:visited {
+  text-decoration: none;
+  color: var(--cor1);
+}
+
+#mail-link:hover,
+#mail-link:active,
+#tel-link:hover,
+#tel-link:active,
+#location-link:hover,
+#location-link:active {
+  color: var(--cor2);
+}
+
+.primary-span {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.secondary-span {
+  font-size: 1.4rem;
+}
